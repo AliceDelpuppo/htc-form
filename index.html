@@ -12,30 +12,33 @@
 <body>
 
     <form>
-        <h1>Faça seu cadastro</h1>
+        <div class="container">
+            <h1 class="title">Faça seu cadastro</h1>
 
         <div class="name">
-            <label>Nome completo <input type="text" data-type="name" placeholder="Digite seu nome completo"></label>
+            <label>Nome completo <input type="text" data-type="name" class="input" placeholder="Digite seu nome completo"></label>
         </div>
 
         <div class="email">
-            <label>E-mail <input type="text" data-type="email" placeholder="Digite seu email"></label>
+            <label>E-mail <input type="text" data-type="email" class="input" placeholder="Digite seu email"></label>
         </div>
 
         <div class="password">
-            <label>Senha <input type="password" data-type="password" placeholder="Crie uma senha"></label>
+            <label>Senha <input type="password" data-type="password" class="input" placeholder="Crie uma senha"></label>
         </div>
 
         <div class="confirm-password">
-            <label>Confirmar senha <input type="password" data-type="password" placeholder="Crie uma senha"></label>
+            <label>Confirmar senha <input type="password" data-type="password-confirm" class="input" placeholder="Crie uma senha"></label>
         </div>
 
         <div class="terms">
-            <input type="checkbox" data-type="terms">
+            <input type="checkbox" id="terms" data-type="ckeck-terms">
             <span class="terms">Aceito os termos de uso e concordo com as <a href="#">políticas de privacidade</a></span>
+            <div class="alert-error-terms"></div>
         </div>
 
         <button class="button">Cadastrar</button>
+        </div>
     </form>
     
 </body>
