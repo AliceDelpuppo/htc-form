@@ -1,0 +1,31 @@
+@import '_variables.scss';
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1{
+    vertical-align: baseline;
+    border: 0;
+    outline: 0;
+    font: inherit;
+    // line-height: 1px;
+}
+
+a {
+    text-decoration: none;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+button {
+    border-style: none;
+}

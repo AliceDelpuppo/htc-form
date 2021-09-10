@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formuário</title>
+
+    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <form>
+        <h1>Faça seu cadastro</h1>
+
+        <div class="name">
+            <label>Nome completo <input type="text" data-type="name" placeholder="Digite seu nome completo"></label>
+        </div>
+
+        <div class="email">
+            <label>E-mail <input type="text" data-type="email" placeholder="Digite seu email"></label>
+        </div>
+
+        <div class="password">
+            <label>Senha <input type="password" data-type="password" placeholder="Crie uma senha"></label>
+        </div>
+
+        <div class="confirm-password">
+            <label>Confirmar senha <input type="password" data-type="password" placeholder="Crie uma senha"></label>
+        </div>
+
+        <div class="terms">
+            <input type="checkbox" data-type="terms">
+            <span class="terms">Aceito os termos de uso e concordo com as <a href="#">políticas de privacidade</a></span>
+        </div>
+
+        <button class="button">Cadastrar</button>
+    </form>
+    
+</body>
+</html>
