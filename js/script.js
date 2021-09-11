@@ -6,6 +6,11 @@ const $passwordConfirm = document.querySelector('input[data-type="password-confi
 const $buttonSubmit = document.querySelector('.button')
 const $inputs = document.querySelectorAll('input')
 
+const $SeePassword = document.querySelector('.see-password')
+const $SeeConfirmPassword = document.querySelector('.see-confirm-password')
+
+const $container = document.querySelector('.container')
+
 const TIME_OFF = 2000
 
 const REGEX_DICTIONARY = {
@@ -59,6 +64,42 @@ function validadeCheckTerms(){
     }
 }
 
+function printThank(){
+    const $termChecked = document.querySelector('.terms #terms:checked')
+    let count = 0
+
+    $inputs.forEach(function ($input) {
+        if (!$input.value || $input.classList.contains('error')) count++
+    });
+
+    if(!$termChecked) count++
+
+    if(count === 0) {
+        const $p = document.createElement('p')
+        $p.classList.add('congratulations')
+        const $text = document.createTextNode('Registro feito com sucesso! Obrigada')
+        $p.appendChild($text)
+
+        $container.innerHTML = ''
+        $container.appendChild($p) 
+    }
+}
+
+$SeePassword.addEventListener('click', function(){
+    if($password.type == 'password') {
+        $password.type = 'text'
+    } else {
+        $password.type = 'password'
+    }
+})
+
+$SeeConfirmPassword.addEventListener('click', function(){
+    if($passwordConfirm.type == 'password') {
+        $passwordConfirm.type = 'text'
+    } else {
+        $passwordConfirm.type = 'password'
+    }
+})
 
 $name.addEventListener('input', validateInput)
 
@@ -79,4 +120,6 @@ $buttonSubmit.addEventListener('click', function (event) {
             }, TIME_OFF);
         }
     });
+
+    printThank()
 })
